@@ -31,11 +31,19 @@ This folder contains everything needed to set up a new OpenClaw deployment for a
 
 | File | Purpose |
 |------|---------|
-| `harden-vps.sh` | One-shot VPS security hardening (UFW, SSH lockdown, fail2ban, Docker security) |
+| `install-openclaw.sh` | Full VPS installer (Node.js, OpenClaw, workspace, systemd service) |
+| `harden-vps.sh` | Security hardening (UFW, SSH lockdown, fail2ban, Docker) |
 
-Run on a fresh VPS before deploying OpenClaw:
+**One-line install on a fresh VPS:**
 ```bash
-sudo bash scripts/harden-vps.sh
+curl -fsSL https://raw.githubusercontent.com/obadiaha/openclaw-starter-kit/main/scripts/install-openclaw.sh | sudo bash
+```
+
+**Or step by step:**
+```bash
+git clone https://github.com/obadiaha/openclaw-starter-kit.git
+cd openclaw-starter-kit
+sudo bash scripts/install-openclaw.sh
 ```
 
 ## Setup Steps
