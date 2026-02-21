@@ -27,6 +27,17 @@ This folder contains everything needed to set up a new OpenClaw deployment for a
 | `content-ideas.md` | Ideas for content creation |
 | `archive/` | Older daily notes (auto-searchable) |
 
+### Scripts (`scripts/`)
+
+| File | Purpose |
+|------|---------|
+| `harden-vps.sh` | One-shot VPS security hardening (UFW, SSH lockdown, fail2ban, Docker security) |
+
+Run on a fresh VPS before deploying OpenClaw:
+```bash
+sudo bash scripts/harden-vps.sh
+```
+
 ## Setup Steps
 
 ### 1. Copy Files
